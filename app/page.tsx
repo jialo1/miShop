@@ -1,5 +1,5 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '../src/components/Header';
+import Footer from '../src/components/Footer';
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
 
               {/* Subtitle */}
               <p className="text-lg text-gray-300 mb-6 max-w-2xl leading-relaxed">
-                L'application mobile qui révolutionne le e-commerce. Créez, gérez et développez votre boutique en ligne directement depuis votre smartphone, sans compétences techniques.
+                L&apos;application mobile qui révolutionne le e-commerce. Créez, gérez et développez votre boutique en ligne directement depuis votre smartphone, sans compétences techniques.
               </p>
 
               {/* Stats */}
@@ -93,7 +93,7 @@ export default function Home() {
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
-                  Télécharger l'application
+                  Télécharger l&apos;application
                   <svg className="w-3 h-3 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -270,7 +270,7 @@ export default function Home() {
               Comment ça marche ?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Votre boutique en ligne en 3 étapes, aussi simple qu'un clic
+              Votre boutique en ligne en 3 étapes, aussi simple qu&apos;un clic
             </p>
           </div>
 
@@ -293,9 +293,9 @@ export default function Home() {
                       <span className="text-[#7C3AED] font-bold text-xs mr-2">ÉTAPE 01</span>
                       <div className="w-6 h-0.5 bg-[#7C3AED]"></div>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Téléchargez l'app</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">Téléchargez l&apos;app</h3>
                     <p className="text-gray-300 text-sm">
-                      Installez mShop depuis l'App Store ou Google Play
+                      Installez mShop depuis l&apos;App Store ou Google Play
                     </p>
                   </div>
                 </div>
@@ -401,7 +401,7 @@ export default function Home() {
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                         </div>
-                        <span className="text-gray-300">Jusqu'à 10 produits</span>
+                        <span className="text-gray-300">Jusqu&apos;à 10 produits</span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-6 h-6 bg-[#7C3AED]/20 rounded-full flex items-center justify-center mr-3">
@@ -581,14 +581,14 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative">
           {/* Friendly badge */}
           <div className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 rounded-full mb-4">
-            <span className="text-white text-sm font-medium">🎉 C'est parti !</span>
+            <span className="text-white text-sm font-medium">🎉 C&apos;est parti !</span>
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             Prêt à créer votre boutique ?
           </h2>
           <p className="text-lg text-white/80 mb-6 max-w-xl">
-            Rejoignez des milliers d'entrepreneurs qui ont déjà choisi mShop pour développer leur business en ligne ✨
+            Rejoignez des milliers d&apos;entrepreneurs qui ont déjà choisi mShop pour développer leur business en ligne ✨
           </p>
 
           {/* Trust indicators */}

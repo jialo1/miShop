@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '../../src/components/Header';
+import Footer from '../../src/components/Footer';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Informations de contact</h2>
                 <p className="text-gray-300 mb-8">
-                  N'hésitez pas à nous contacter pour toute question concernant mShop. 
+                  N&apos;hésitez pas à nous contacter pour toute question concernant mShop. 
                   Nous vous répondrons dans les plus brefs délais.
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Adresse</h3>
-                    <p className="text-gray-300">123 Rue de l'Innovation<br />75001 Paris, France</p>
+                    <p className="text-gray-300">123 Rue de l&apos;Innovation<br />75001 Paris, France</p>
                   </div>
                 </div>
               </div>

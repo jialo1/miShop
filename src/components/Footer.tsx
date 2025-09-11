@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="ml-2 text-xl font-bold">mShop</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              L'application mobile qui révolutionne la création de boutiques en ligne. 
+              L&apos;application mobile qui révolutionne la création de boutiques en ligne. 
               Créez votre boutique professionnelle en quelques minutes, directement depuis votre smartphone.
             </p>
             <div className="flex space-x-4">
@@ -87,7 +87,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#terms" className="text-gray-400 hover:text-white transition-colors">
-                  Conditions d'utilisation
+                  Conditions d&apos;utilisation
                 </Link>
               </li>
             </ul>
