@@ -36,15 +36,15 @@ export default function Home() {
 
               {/* Main heading */}
               <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Créez votre boutique en ligne
+                
                 <span className="block bg-gradient-to-r from-[#c084fc] via-white to-white bg-clip-text text-transparent">
-                  en quelques minutes
+                  Votre site web en 3 clics
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-lg text-gray-300 mb-6 max-w-2xl leading-relaxed">
-                L&apos;application mobile qui révolutionne le e-commerce. Créez, gérez et développez votre boutique en ligne directement depuis votre smartphone, sans compétences techniques.
+                Créez votre site web personnel en quelques clics, intégrant tous les moyens de paiement locaux. Personnalisez-le à votre image, ajoutez vos produits, puis partagez facilement le lien sur vos réseaux sociaux. Simple, rapide et conçu pour vous mettre en valeur !
               </p>
 
               {/* Stats */}
@@ -168,10 +168,10 @@ export default function Home() {
                       <span className="text-[#7C3AED] font-bold text-sm mr-2">STAR</span>
                       <div className="w-8 h-0.5 bg-[#7C3AED]"></div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Configuration rapide</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3">Votre site web en 3 clics</h3>
                     <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                      Créez votre boutique en moins de 10 minutes avec notre assistant intelligent. 
-                      Interface intuitive et guidage pas à pas.
+                      Créez votre site web personnel en quelques clics, intégrant tous les moyens de paiement locaux. Personnalisez-le à votre image, ajoutez vos produits, puis partagez facilement le lien sur vos réseaux sociaux.
+                      Simple, rapide et conçu pour vous mettre en valeur !
                     </p>
                     <div className="flex items-center text-[#7C3AED] text-sm font-medium">
                       <span>En savoir plus</span>

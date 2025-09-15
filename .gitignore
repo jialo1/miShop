@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# build artifacts and cache
+/chunks/
+/media/
+/_next/
+*.zip
+
+# temporary files
+*.tmp
+*.temp
+*.log
+
+# duplicate files
+*.html
+styles.css

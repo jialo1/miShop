@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,21 +27,22 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#0b0c10]/95 backdrop-blur-md shadow-lg border-b border-[#7C3AED]/20 sticky top-0 z-50">
+    <header className="bg-theme-primary/95 backdrop-blur-md shadow-lg border-b border-[#7C3AED]/20 sticky top-0 z-50 animate-slide-in-bottom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <div className="w-10 h-10 bg-gradient-to-r from-[#563491] to-[#7C3AED] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-[#7C3AED]/25 transition-all duration-300 group-hover:scale-105">
-                <span className="text-white font-bold text-xl">m</span>
-              </div>
-              <span className="ml-3 text-2xl font-bold text-white group-hover:text-[#7C3AED] transition-colors duration-300">mShop</span>
+              <img 
+                src="/logo.svg" 
+                alt="mShop Logo" 
+                className="w-40 h-40 group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_40px_rgba(124,58,237,0.8)] group-hover:drop-shadow-[0_0_60px_rgba(124,58,237,1)] brightness-110 group-hover:brightness-125"
+              />
             </Link>
           </div>
 
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex space-x-1">
+          <nav className="hidden md:flex space-x-1 animate-slide-in-right">
             <Link href="#features" className={getLinkClasses('#features', 'group px-4 py-2 text-sm font-medium transition-all duration-300 relative rounded-lg')}>
               <span className="relative z-10">Fonctionnalités</span>
               <div className={`absolute inset-0 bg-gradient-to-r from-[#563491]/20 to-[#7C3AED]/20 rounded-lg transition-opacity duration-300 ${isActive('#features') ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
@@ -65,6 +67,7 @@ export default function Header() {
 
           {/* Language Switcher */}
           <div className="hidden md:flex items-center space-x-4">
+            {/* <ThemeToggle /> */}
             <div className="flex items-center bg-gradient-to-r from-[#1a1b23] to-[#2a2b33] border border-[#7C3AED]/30 rounded-xl p-1 shadow-lg">
               <button 
                 onClick={() => setLanguage('fr')}
@@ -162,6 +165,10 @@ export default function Header() {
                           </span>
                         </Link>
             <div className="px-4 py-3 mt-4 border-t border-[#7C3AED]/20">
+              {/* <div className="flex items-center justify-between mb-3">
+                <span className="text-sm text-gray-400">Thème</span>
+                <ThemeToggle />
+              </div> */}
               <div className="flex items-center bg-gradient-to-r from-[#1a1b23] to-[#2a2b33] border border-[#7C3AED]/30 rounded-xl p-1 shadow-lg">
                 <button 
                   onClick={() => setLanguage('fr')}

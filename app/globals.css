@@ -1,5 +1,85 @@
 @import "tailwindcss";
 
+/* Hide Next.js devtools indicator */
+.devtools-indicator {
+  display: none !important;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInScale {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.6s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.6s ease-out;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, .interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover, a:hover, .interactive:hover {
+  transform: translateY(-2px);
+}
+
+/* Loading animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +103,161 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Light theme styles */
+.light {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #f8fafc;
+  --card-foreground: #0f172a;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #7c3aed;
+}
+
+/* Dark theme styles (default) */
+.dark {
+  --background: #0b0c10;
+  --foreground: #ffffff;
+  --card: #1a1b23;
+  --card-foreground: #ffffff;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --secondary: #1a1b23;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1b23;
+  --muted-foreground: #9ca3af;
+  --accent: #1a1b23;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #7c3aed;
+}
+
+/* Custom theme classes */
+.bg-theme-primary {
+  background-color: #0b0c10;
+}
+
+.bg-theme-secondary {
+  background-color: #1a1b23;
+}
+
+.bg-theme-tertiary {
+  background-color: #2a2b33;
+}
+
+.bg-theme-hero {
+  background: linear-gradient(to bottom right, #0b0c10, #1a1b23, #2d1b69);
+}
+
+.text-theme-primary {
+  color: #ffffff;
+}
+
+.text-theme-secondary {
+  color: #d1d5db;
+}
+
+.text-theme-tertiary {
+  color: #9ca3af;
+}
+
+.border-theme-primary {
+  border-color: #374151;
+}
+
+.border-theme-secondary {
+  border-color: #4b5563;
+}
+
+/* Light theme overrides */
+.light .bg-theme-primary {
+  background-color: #ffffff;
+}
+
+.light .bg-theme-secondary {
+  background-color: #f8fafc;
+}
+
+.light .bg-theme-tertiary {
+  background-color: #f1f5f9;
+}
+
+.light .bg-theme-hero {
+  background: linear-gradient(to bottom right, #ffffff, #f8fafc, #ede9fe);
+}
+
+.light .text-theme-primary {
+  color: #0f172a;
+}
+
+.light .text-theme-secondary {
+  color: #64748b;
+}
+
+.light .text-theme-tertiary {
+  color: #94a3b8;
+}
+
+.light .border-theme-primary {
+  border-color: #e2e8f0;
+}
+
+.light .border-theme-secondary {
+  border-color: #cbd5e1;
 }
