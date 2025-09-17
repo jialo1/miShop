@@ -1,7 +1,61 @@
 @import "tailwindcss";
 
-/* Hide Next.js devtools indicator */
-.devtools-indicator {
+/* Hide Next.js devtools indicator and any scrolling elements */
+.devtools-indicator,
+#devtools-indicator,
+[data-nextjs-toast],
+.nextjs-toast,
+[data-next-badge],
+[data-next-badge-root],
+[data-nextjs-codemod],
+.nextjs-codemod,
+[data-nextjs-dev-overlay],
+.nextjs-dev-overlay,
+[data-nextjs-build-indicator],
+.nextjs-build-indicator,
+[data-nextjs-turbo],
+.nextjs-turbo,
+[aria-label*="Next.js"],
+[aria-label*="TypeScript"],
+[aria-label*="React"],
+[aria-label*="Development"],
+[title*="Next.js"],
+[title*="TypeScript"],
+[title*="React"],
+[title*="Development"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+
+/* Hide any elements that might be scrolling horizontally */
+*[style*="transform: translateX"],
+*[style*="animation: scroll"],
+*[style*="animation: marquee"],
+*[style*="overflow: auto"],
+*[style*="overflow-x: auto"] {
+  display: none !important;
+}
+
+/* Additional rules to hide development indicators */
+body > div[style*="position: fixed"],
+body > div[style*="z-index: 9999"],
+body > div[style*="bottom: 0"],
+body > div[style*="left: 0"],
+iframe[src*="nextjs"],
+iframe[src*="typescript"],
+iframe[src*="react"] {
+  display: none !important;
+}
+
+/* Hide any floating or sticky development badges */
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: sticky"][style*="bottom"],
+div[style*="position: absolute"][style*="bottom"] {
   display: none !important;
 }
 

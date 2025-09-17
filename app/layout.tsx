@@ -22,6 +22,60 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Hide development indicators and scrolling elements
+              function hideDevIndicators() {
+                const selectors = [
+                  '[data-nextjs-toast]',
+                  '.nextjs-toast',
+                  '[data-next-badge]',
+                  '[data-next-badge-root]',
+                  '#devtools-indicator',
+                  '.devtools-indicator',
+                  '[aria-label*="Next.js"]',
+                  '[aria-label*="TypeScript"]',
+                  '[aria-label*="React"]',
+                  '[title*="Next.js"]',
+                  '[title*="TypeScript"]',
+                  '[title*="React"]'
+                ];
+                
+                selectors.forEach(selector => {
+                  const elements = document.querySelectorAll(selector);
+                  elements.forEach(el => {
+                    el.style.display = 'none';
+                    el.style.visibility = 'hidden';
+                    el.style.opacity = '0';
+                    el.remove();
+                  });
+                });
+                
+                // Hide any elements with horizontal scrolling
+                const scrollingElements = document.querySelectorAll('*');
+                scrollingElements.forEach(el => {
+                  const style = window.getComputedStyle(el);
+                  if (style.transform.includes('translateX') || 
+                      style.animation.includes('scroll') ||
+                      style.animation.includes('marquee')) {
+                    el.style.display = 'none';
+                  }
+                });
+              }
+              
+              // Run immediately and on DOM changes
+              document.addEventListener('DOMContentLoaded', hideDevIndicators);
+              document.addEventListener('load', hideDevIndicators);
+              
+              // Watch for new elements
+              const observer = new MutationObserver(hideDevIndicators);
+              observer.observe(document.body, { childList: true, subtree: true });
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${poppins.variable} font-sans antialiased`}
       >
