@@ -8,7 +8,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 group"
+      className={`relative p-2 rounded-lg transition-all duration-300 group ${
+        theme === 'dark' 
+          ? 'bg-[#1a1b23] hover:bg-[#2a2b33] border border-[#7C3AED]/20 hover:border-[#7C3AED]/40' 
+          : 'bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300'
+      }`}
       aria-label={`Basculer vers le mode ${theme === 'dark' ? 'clair' : 'sombre'}`}
     >
       {/* Icône soleil (mode clair) */}

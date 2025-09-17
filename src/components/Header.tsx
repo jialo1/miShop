@@ -27,7 +27,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-theme-primary/95 backdrop-blur-md shadow-lg border-b border-[#7C3AED]/20 sticky top-0 z-50 animate-slide-in-bottom">
+    <header className="backdrop-blur-md shadow-lg border-b border-[#7C3AED]/20 sticky top-0 z-50 animate-slide-in-bottom bg-[#0b0c10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-18">
           {/* Logo */}
@@ -65,9 +65,9 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Language Switcher */}
+          {/* Theme Toggle and Language Switcher */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
             <div className="flex items-center bg-gradient-to-r from-[#1a1b23] to-[#2a2b33] border border-[#7C3AED]/30 rounded-xl p-1 shadow-lg">
               <button 
                 onClick={() => setLanguage('fr')}
