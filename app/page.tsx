@@ -139,9 +139,9 @@ export default function Home() {
           </div>
 
           {/* Mosaic Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center lg:justify-items-stretch">
             {/* Feature 1 - Large card */}
-            <div className="lg:col-span-2 lg:row-span-2 relative group">
+            <div className="lg:col-span-2 lg:row-span-2 relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-2xl p-8 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#7C3AED]/10" style={{ background: 'linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary))' }}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-[#7C3AED] to-[#563491] rounded-xl flex items-center justify-center shadow-lg">
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-xl p-4 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/10" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <div className="w-10 h-10 bg-[#7C3AED]/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#7C3AED]/30 transition-colors">
                   <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-xl p-4 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/10" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <div className="w-10 h-10 bg-[#7C3AED]/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#7C3AED]/30 transition-colors">
                   <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +197,7 @@ export default function Home() {
             </div>
 
             {/* Feature 4 */}
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-xl p-4 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/10" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <div className="w-10 h-10 bg-[#7C3AED]/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#7C3AED]/30 transition-colors">
                   <img
@@ -214,7 +214,7 @@ export default function Home() {
             </div>
 
             {/* Feature 5 */}
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-xl p-4 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/10" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <div className="w-10 h-10 bg-[#7C3AED]/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#7C3AED]/30 transition-colors">
                   <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
 
             {/* Feature 6 */}
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-xl p-4 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/10" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                 <div className="w-10 h-10 bg-[#7C3AED]/20 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#7C3AED]/30 transition-colors">
                   <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
