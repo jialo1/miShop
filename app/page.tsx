@@ -76,7 +76,7 @@ export default function Home() {
                     <div className="bg-white p-1 rounded-md shadow-md">
                       <img
                         src="/QRcode.png"
-                        alt="QR Code pour télécharger mShop"
+                        alt="QR Code pour télécharger miShop"
                         className="w-10 h-10 sm:w-12 sm:h-12"
                       />
                     </div>
@@ -102,7 +102,7 @@ export default function Home() {
               <div className="relative mx-auto w-96 h-[28rem] bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-[#7C3AED]/20 overflow-hidden flex items-center justify-center">
                 <img 
                   src="/hero.svg" 
-                  alt="mShop Hero" 
+                  alt="miShop Hero" 
                   className="w-full h-full object-contain animate-pulse hover:animate-none transition-all duration-300 hover:scale-105"
                 />
               </div>
@@ -270,7 +270,7 @@ export default function Home() {
                 Téléchargement
               </h3>
               <p className="text-base leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: 'var(--text-secondary)' }}>
-                Téléchargez l&apos;application mShop depuis l&apos;App Store ou Google Play Store. L&apos;installation est rapide et sécurisée, vous permettant de commencer en quelques minutes.
+                Téléchargez l&apos;application miShop depuis l&apos;App Store ou Google Play Store. L&apos;installation est rapide et sécurisée, vous permettant de commencer en quelques minutes.
               </p>
             </div>
 
@@ -563,7 +563,7 @@ export default function Home() {
               <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>📱 Application</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: 'var(--text-primary)' }}>
-              Découvrez mShop en action
+              Découvrez miShop en action
             </h2>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
               Une interface intuitive et moderne, conçue pour simplifier votre expérience e-commerce
@@ -586,7 +586,7 @@ export default function Home() {
                       <div className="w-full h-full rounded-[2rem] relative overflow-hidden">
                         <img 
                           src="/Phone1.JPG" 
-                          alt="Dashboard mShop" 
+                          alt="Dashboard miShop" 
                           className="w-full h-full object-cover rounded-[2rem]"
                         />
                         {/* Home button */}
@@ -610,7 +610,7 @@ export default function Home() {
                       <div className="w-full h-full rounded-[2rem] relative overflow-hidden">
                         <img 
                           src="/Phone2.JPEG" 
-                          alt="Produits mShop" 
+                          alt="Produits miShop" 
                           className="w-full h-full object-cover rounded-[2rem]"
                         />
                         {/* Home button */}
@@ -643,7 +643,7 @@ export default function Home() {
                   Prêt à créer votre boutique ?
                 </h2>
                 <p className="text-sm sm:text-base mb-3 sm:mb-4 max-w-lg" style={{ color: 'var(--text-secondary)' }}>
-                  Rejoignez des milliers d&apos;entrepreneurs qui ont déjà choisi mShop pour développer leur business en ligne ✨
+                  Rejoignez des milliers d&apos;entrepreneurs qui ont déjà choisi miShop pour développer leur business en ligne ✨
                 </p>
 
                 {/* Trust indicators - Compact */}

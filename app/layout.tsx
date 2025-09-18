@@ -13,8 +13,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://mshop-app.com'),
   title: {
-    default: "mShop - Créez votre boutique en ligne facilement",
-    template: "%s | mShop"
+    default: "miShop - Créez votre boutique en ligne facilement",
+    template: "%s | miShop"
   },
   description: "L'application mobile qui vous permet de créer une boutique en ligne professionnelle en quelques minutes. Simple, rapide et efficace comme Shopify. Créez votre e-commerce en 3 clics.",
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "créateur boutique",
     "boutique professionnelle"
   ],
-  authors: [{ name: "mShop Team", url: "https://github.com/jialo1/miShop" }],
-  creator: "mShop",
-  publisher: "mShop",
+  authors: [{ name: "miShop Team", url: "https://github.com/jialo1/miShop" }],
+  creator: "miShop",
+  publisher: "miShop",
   robots: {
     index: true,
     follow: true,
@@ -53,21 +53,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_FR',
     url: 'https://mshop-app.com',
-    siteName: 'mShop',
-    title: 'mShop - Créez votre boutique en ligne facilement',
+    siteName: 'miShop',
+    title: 'miShop - Créez votre boutique en ligne facilement',
     description: 'L\'application mobile qui vous permet de créer une boutique en ligne professionnelle en quelques minutes. Simple, rapide et efficace.',
     images: [
       {
         url: '/logo.svg',
         width: 1200,
         height: 630,
-        alt: 'mShop - Application de création de boutique en ligne',
+        alt: 'miShop - Application de création de boutique en ligne',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'mShop - Créez votre boutique en ligne facilement',
+    title: 'miShop - Créez votre boutique en ligne facilement',
     description: 'L\'application mobile qui vous permet de créer une boutique en ligne professionnelle en quelques minutes.',
     images: ['/logo.svg'],
     creator: '@mshop',
@@ -114,7 +114,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              "name": "mShop",
+              "name": "miShop",
               "description": "Application mobile pour créer une boutique en ligne professionnelle en quelques minutes",
               "url": "https://mshop-app.com",
               "applicationCategory": "BusinessApplication",
@@ -126,11 +126,11 @@ export default function RootLayout({
               },
               "author": {
                 "@type": "Organization",
-                "name": "mShop Team"
+                "name": "miShop Team"
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "mShop",
+                "name": "miShop",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "https://mshop-app.com/logo.svg"

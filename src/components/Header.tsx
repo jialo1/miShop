@@ -35,7 +35,7 @@ export default function Header() {
             <Link href="/" className="flex items-center group">
               <img 
                 src="/logo.svg" 
-                alt="mShop Logo" 
+                alt="miShop Logo" 
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_40px_rgba(124,58,237,0.8)] group-hover:drop-shadow-[0_0_60px_rgba(124,58,237,1)] brightness-110 group-hover:brightness-125"
               />
             </Link>

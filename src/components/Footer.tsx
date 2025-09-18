@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
                 <img 
                   src="/logo.svg" 
-                  alt="mShop Logo" 
+                  alt="miShop Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -120,7 +120,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
           <p className="text-gray-400 text-sm sm:text-base">
-            © 2024 mShop. Tous droits réservés.
+            © 2024 miShop. Tous droits réservés.
           </p>
         </div>
       </div>

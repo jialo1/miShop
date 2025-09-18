@@ -6,12 +6,12 @@ import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Contact - mShop',
-  description: 'Contactez l\'équipe mShop pour toute question sur notre application de création de boutique en ligne. Support client et assistance technique.',
-  keywords: ['contact mShop', 'support client', 'aide technique', 'assistance e-commerce'],
+  title: 'Contact - miShop',
+  description: 'Contactez l\'équipe miShop pour toute question sur notre application de création de boutique en ligne. Support client et assistance technique.',
+  keywords: ['contact miShop', 'support client', 'aide technique', 'assistance e-commerce'],
   openGraph: {
-    title: 'Contact - mShop',
-    description: 'Contactez l\'équipe mShop pour toute question sur notre application de création de boutique en ligne.',
+    title: 'Contact - miShop',
+    description: 'Contactez l\'équipe miShop pour toute question sur notre application de création de boutique en ligne.',
     url: 'https://mshop-app.com/contact',
   },
 };
@@ -87,7 +87,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: 'var(--text-primary)' }}>Informations de contact</h2>
                 <p className="mb-6 sm:mb-8 text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
-                  N&apos;hésitez pas à nous contacter pour toute question concernant mShop. 
+                  N&apos;hésitez pas à nous contacter pour toute question concernant miShop. 
                   Nous vous répondrons dans les plus brefs délais.
                 </p>
               </div>

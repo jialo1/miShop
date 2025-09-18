@@ -1,7 +1,7 @@
 {
-  "name": "mShop - Boutique en ligne",
-  "short_name": "mShop",
-  "description": "Créez votre boutique en ligne facilement avec mShop",
+  "name": "miShop - Boutique en ligne",
+  "short_name": "miShop",
+  "description": "Créez votre boutique en ligne facilement avec miShop",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0c10",
