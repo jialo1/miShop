@@ -1,8 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { Metadata } from 'next';
 import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
+
+export const metadata: Metadata = {
+  title: 'Contact - mShop',
+  description: 'Contactez l\'équipe mShop pour toute question sur notre application de création de boutique en ligne. Support client et assistance technique.',
+  keywords: ['contact mShop', 'support client', 'aide technique', 'assistance e-commerce'],
+  openGraph: {
+    title: 'Contact - mShop',
+    description: 'Contactez l\'équipe mShop pour toute question sur notre application de création de boutique en ligne.',
+    url: 'https://mshop-app.com/contact',
+  },
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
