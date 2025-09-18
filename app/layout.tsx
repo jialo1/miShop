@@ -11,6 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mshop-app.com'),
   title: {
     default: "mShop - Créez votre boutique en ligne facilement",
     template: "%s | mShop"
