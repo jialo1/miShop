@@ -1,1 +1,1 @@
-# miShop - Site Vitrine
+# mShop - Site Vitrine
