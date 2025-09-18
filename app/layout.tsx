@@ -88,7 +88,25 @@ export default function RootLayout({
               
               // Prevent extension-related console errors
               window.addEventListener('error', function(e) {
-                if (e.message && e.message.includes('message channel closed')) {
+                if (e.message && (
+                  e.message.includes('message channel closed') ||
+                  e.message.includes('message port closed') ||
+                  e.message.includes('extension') ||
+                  e.message.includes('chrome-extension') ||
+                  e.message.includes('moz-extension')
+                )) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                }
+              });
+              
+              // Prevent unhandled promise rejections from extensions
+              window.addEventListener('unhandledrejection', function(e) {
+                if (e.reason && (
+                  e.reason.message && e.reason.message.includes('message channel closed') ||
+                  e.reason.message && e.reason.message.includes('extension')
+                )) {
                   e.preventDefault();
                   return false;
                 }

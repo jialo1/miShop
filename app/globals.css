@@ -73,8 +73,28 @@ body {
 /* Hide any browser extension overlays */
 [id*="extension"],
 [class*="extension"],
-[data-extension] {
+[data-extension],
+[data-extension-id],
+[data-ext-id] {
   display: none !important;
+}
+
+/* Suppress extension-related console noise */
+body::before {
+  content: '';
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  z-index: -9999;
+}
+
+/* Additional console error suppression for extensions */
+* {
+  /* Prevent extension interference */
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 /* Custom animations */

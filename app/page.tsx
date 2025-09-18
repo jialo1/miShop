@@ -31,7 +31,7 @@ export default function Home() {
 
               {/* Main heading */}
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
-                <span className="block bg-gradient-to-r from-[#7C3AED] via-[#563491] to-black bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#7C3AED] via-[#563491] to-black dark:to-white bg-clip-text text-transparent">
                   Votre boutique en ligne en 3 clics
                 </span>
               </h1>
