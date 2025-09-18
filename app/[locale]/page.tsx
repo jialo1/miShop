@@ -1,7 +1,12 @@
-import Header from '../src/components/Header';
-import Footer from '../src/components/Footer';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Header from '../../src/components/Header';
+import Footer from '../../src/components/Footer';
 
 export default function Home() {
+  const t = useTranslations();
+  
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <Header />
@@ -32,13 +37,13 @@ export default function Home() {
               {/* Main heading */}
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
                 <span className="block bg-gradient-to-r from-[#7C3AED] via-[#563491] to-black dark:to-white bg-clip-text text-transparent">
-                  Votre boutique en ligne en 3 clics
+                  {t('hero.title')}
                 </span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-xs sm:text-sm mb-4 sm:mb-6 max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                Créez votre site web personnel en quelques clics, intégrant tous les moyens de paiement locaux. Personnalisez-le à votre image, ajoutez vos produits, puis partagez facilement le lien sur vos réseaux sociaux. Simple, rapide et conçu pour vous mettre en valeur !
+                {t('hero.subtitle')}
               </p>
 
 

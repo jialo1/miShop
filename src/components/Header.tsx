@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('fr');
   const pathname = usePathname();
+  const t = useTranslations('navigation');
 
   // Fonction pour déterminer si un lien est actif
   const isActive = (href: string) => {
@@ -68,28 +70,7 @@ export default function Header() {
           {/* Theme Toggle and Language Switcher */}
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <div className="flex items-center bg-gradient-to-r from-[#1a1b23] to-[#2a2b33] border border-[#7C3AED]/30 rounded-xl p-1 shadow-lg">
-              <button 
-                onClick={() => setLanguage('fr')}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                  language === 'fr' 
-                    ? 'text-white bg-gradient-to-r from-[#563491] to-[#7C3AED] shadow-lg' 
-                    : 'text-gray-300 hover:text-white hover:bg-[#7C3AED]/10'
-                }`}
-              >
-                🇫🇷 FR
-              </button>
-              <button 
-                onClick={() => setLanguage('en')}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                  language === 'en' 
-                    ? 'text-white bg-gradient-to-r from-[#563491] to-[#7C3AED] shadow-lg' 
-                    : 'text-gray-300 hover:text-white hover:bg-[#7C3AED]/10'
-                }`}
-              >
-                🇺🇸 EN
-              </button>
-            </div>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
