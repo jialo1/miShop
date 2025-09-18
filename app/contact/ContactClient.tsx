@@ -1,15 +1,15 @@
-'use client';
+&apos;use client&apos;;
 
-import { useState } from 'react';
-import Header from '../../src/components/Header';
-import Footer from '../../src/components/Footer';
+import { useState } from &apos;react&apos;;
+import Header from &apos;../../src/components/Header&apos;;
+import Footer from &apos;../../src/components/Footer&apos;;
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: &apos;&apos;,
+    email: &apos;&apos;,
+    subject: &apos;&apos;,
+    message: &apos;&apos;
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,16 +45,16 @@ export default function ContactClient() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+              <h2 className="text-xl font-bold mb-2" style={{ color: &apos;var(--text-primary)&apos; }}>
                 Message envoyé !
               </h2>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+              <p className="text-sm" style={{ color: &apos;var(--text-secondary)&apos; }}>
                 Merci pour votre message. Nous vous répondrons dans les plus brefs délais.
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({ name: '', email: '', subject: '', message: '' });
+                  setFormData({ name: &apos;&apos;, email: &apos;&apos;, subject: &apos;&apos;, message: &apos;&apos; });
                 }}
                 className="mt-4 px-4 py-2 bg-[#7C3AED] text-white rounded-lg hover:bg-[#6D28D9] transition-colors text-sm"
               >
@@ -75,11 +75,11 @@ export default function ContactClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: &apos;var(--text-primary)&apos; }}>
               Contactez-nous
             </h1>
-            <p className="text-sm sm:text-base sm:text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-              Une question ? Un problème ? Notre équipe est là pour vous aider. N'hésitez pas à nous contacter.
+            <p className="text-sm sm:text-base sm:text-lg max-w-2xl mx-auto" style={{ color: &apos;var(--text-secondary)&apos; }}>
+              Une question ? Un problème ? Notre équipe est là pour vous aider. N&apos;hésitez pas à nous contacter.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export default function ContactClient() {
             {/* Contact Info */}
             <div className="space-y-6 sm:space-y-8">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: 'var(--text-primary)' }}>
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: &apos;var(--text-primary)&apos; }}>
                   Informations de contact
                 </h2>
                 <div className="space-y-4 sm:space-y-6">
@@ -98,10 +98,10 @@ export default function ContactClient() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
+                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: &apos;var(--text-primary)&apos; }}>
                         Email
                       </h3>
-                      <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
+                      <p className="text-sm sm:text-base" style={{ color: &apos;var(--text-secondary)&apos; }}>
                         support@mishop.com
                       </p>
                     </div>
@@ -114,10 +114,10 @@ export default function ContactClient() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
+                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: &apos;var(--text-primary)&apos; }}>
                         Temps de réponse
                       </h3>
-                      <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
+                      <p className="text-sm sm:text-base" style={{ color: &apos;var(--text-secondary)&apos; }}>
                         24h en moyenne
                       </p>
                     </div>
@@ -131,11 +131,11 @@ export default function ContactClient() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
+                      <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: &apos;var(--text-primary)&apos; }}>
                         Localisation
                       </h3>
-                      <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
-                        Afrique de l'Ouest
+                      <p className="text-sm sm:text-base" style={{ color: &apos;var(--text-secondary)&apos; }}>
+                        Afrique de l&apos;Ouest
                       </p>
                     </div>
                   </div>
@@ -143,11 +143,11 @@ export default function ContactClient() {
               </div>
 
               <div className="bg-gradient-to-r from-[#7C3AED]/5 to-[#563491]/5 rounded-xl p-4 sm:p-6 border border-[#7C3AED]/10">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{ color: 'var(--text-primary)' }}>
-                  Besoin d'aide immédiate ?
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{ color: &apos;var(--text-primary)&apos; }}>
+                  Besoin d&apos;aide immédiate ?
                 </h3>
-                <p className="text-sm sm:text-base mb-4" style={{ color: 'var(--text-secondary)' }}>
-                  Consultez notre FAQ ou notre centre d'aide pour des réponses rapides.
+                <p className="text-sm sm:text-base mb-4" style={{ color: &apos;var(--text-secondary)&apos; }}>
+                  Consultez notre FAQ ou notre centre d&apos;aide pour des réponses rapides.
                 </p>
                 <button className="px-4 py-2 bg-[#7C3AED] text-white rounded-lg hover:bg-[#6D28D9] transition-colors text-sm font-medium">
                   Voir la FAQ
@@ -157,14 +157,14 @@ export default function ContactClient() {
 
             {/* Contact Form */}
             <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm rounded-xl p-6 sm:p-8 border border-white/10">
-              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: 'var(--text-primary)' }}>
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: &apos;var(--text-primary)&apos; }}>
                 Envoyez-nous un message
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: &apos;var(--text-primary)&apos; }}>
                       Nom complet
                     </label>
                     <input
@@ -175,13 +175,13 @@ export default function ContactClient() {
                       onChange={handleChange}
                       required
                       className="w-full px-3 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent text-sm sm:text-base"
-                      style={{ color: 'var(--text-primary)' }}
+                      style={{ color: &apos;var(--text-primary)&apos; }}
                       placeholder="Votre nom"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: &apos;var(--text-primary)&apos; }}>
                       Email
                     </label>
                     <input
@@ -192,14 +192,14 @@ export default function ContactClient() {
                       onChange={handleChange}
                       required
                       className="w-full px-3 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent text-sm sm:text-base"
-                      style={{ color: 'var(--text-primary)' }}
+                      style={{ color: &apos;var(--text-primary)&apos; }}
                       placeholder="votre@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2" style={{ color: &apos;var(--text-primary)&apos; }}>
                     Sujet
                   </label>
                   <input
@@ -210,13 +210,13 @@ export default function ContactClient() {
                     onChange={handleChange}
                     required
                     className="w-full px-3 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent text-sm sm:text-base"
-                    style={{ color: 'var(--text-primary)' }}
+                    style={{ color: &apos;var(--text-primary)&apos; }}
                     placeholder="Sujet de votre message"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: &apos;var(--text-primary)&apos; }}>
                     Message
                   </label>
                   <textarea
@@ -227,7 +227,7 @@ export default function ContactClient() {
                     required
                     rows={5}
                     className="w-full px-3 py-2 sm:py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent text-sm sm:text-base resize-none"
-                    style={{ color: 'var(--text-primary)' }}
+                    style={{ color: &apos;var(--text-primary)&apos; }}
                     placeholder="Décrivez votre question ou problème..."
                   />
                 </div>
@@ -237,7 +237,7 @@ export default function ContactClient() {
                   disabled={isSubmitting}
                   className="w-full px-4 py-2 sm:py-3 bg-[#7C3AED] text-white rounded-lg hover:bg-[#6D28D9] disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm sm:text-base font-medium"
                 >
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                  {isSubmitting ? &apos;Envoi en cours...&apos; : &apos;Envoyer le message&apos;}
                 </button>
               </form>
             </div>
