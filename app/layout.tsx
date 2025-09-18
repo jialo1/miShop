@@ -106,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html>
       <head>
         <script
           type="application/ld+json"
@@ -249,14 +249,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${poppins.variable} font-sans antialiased`}
-      >
-        <ThemeProvider>
-          <ThemeWrapper>
-            {children}
-          </ThemeWrapper>
-        </ThemeProvider>
+      <body>
+        {children}
       </body>
     </html>
   );
