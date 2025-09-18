@@ -11,10 +11,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactLayout({
+export default async function ContactLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }) {
+  const {locale} = await params;
   return children;
 }
