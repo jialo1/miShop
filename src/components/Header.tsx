@@ -29,14 +29,14 @@ export default function Header() {
   return (
     <header className="backdrop-blur-md shadow-lg border-b border-[#7C3AED]/20 sticky top-0 z-50 animate-slide-in-bottom bg-[#0b0c10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex justify-between items-center h-16 sm:h-18">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
               <img 
                 src="/logo.svg" 
                 alt="mShop Logo" 
-                className="w-40 h-40 group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_40px_rgba(124,58,237,0.8)] group-hover:drop-shadow-[0_0_60px_rgba(124,58,237,1)] brightness-110 group-hover:brightness-125"
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_40px_rgba(124,58,237,0.8)] group-hover:drop-shadow-[0_0_60px_rgba(124,58,237,1)] brightness-110 group-hover:brightness-125"
               />
             </Link>
           </div>

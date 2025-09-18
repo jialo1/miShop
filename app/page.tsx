@@ -7,7 +7,7 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden" style={{ background: 'var(--gradient-primary)' }}>
+      <section className="relative py-8 sm:py-12 md:py-16 overflow-hidden" style={{ background: 'var(--gradient-primary)' }}>
         {/* Animated background elements */}
         <div className="absolute inset-0">
           {/* Floating orbs */}
@@ -25,25 +25,25 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Left side - Content */}
             <div className="text-left">
 
               {/* Main heading */}
-              <h1 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
                 <span className="block bg-gradient-to-r from-[#7C3AED] via-[#563491] to-black bg-clip-text text-transparent">
                   Votre boutique en ligne en 3 clics
                 </span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-xs mb-6 max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+              <p className="text-xs sm:text-sm mb-4 sm:mb-6 max-w-2xl leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 Créez votre site web personnel en quelques clics, intégrant tous les moyens de paiement locaux. Personnalisez-le à votre image, ajoutez vos produits, puis partagez facilement le lien sur vos réseaux sociaux. Simple, rapide et conçu pour vous mettre en valeur !
               </p>
 
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <a
                     href="#download"
                     className="group bg-gradient-to-r from-[#563491] to-[#7C3AED] text-white px-4 py-2 rounded-md font-medium text-sm hover:from-[#4C1D95] hover:to-[#6D28D9] transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-[#7C3AED]/25 hover:-translate-y-0.5 flex items-center justify-center"
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
 
               {/* QR Code Scanner Section */}
-              <div className="mt-6 w-fit bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-[#7C3AED]/20">
+              <div className="mt-4 sm:mt-6 w-fit bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-[#7C3AED]/20">
                 <div className="flex items-center space-x-3">
                   {/* QR Code */}
                   <div className="flex-shrink-0">
@@ -77,7 +77,7 @@ export default function Home() {
                       <img
                         src="/QRcode.png"
                         alt="QR Code pour télécharger mShop"
-                        className="w-12 h-12"
+                        className="w-10 h-10 sm:w-12 sm:h-12"
                       />
                     </div>
                   </div>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section id="features" className="py-12 sm:py-16 md:py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-primary)' }}>
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 bg-[#7C3AED] rounded-full blur-3xl"></div>
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
 
           {/* Mosaic Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Feature 1 - Large card */}
             <div className="lg:col-span-2 lg:row-span-2 relative group">
               <div className="h-full rounded-2xl p-8 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#7C3AED]/10" style={{ background: 'linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary))' }}>
@@ -247,26 +247,26 @@ export default function Home() {
       </section>
 
       {/* How it works Section */}
-      <section id="how-it-works" className="py-20" style={{ backgroundColor: 'var(--bg-how-it-works)' }}>
+      <section id="how-it-works" className="py-12 sm:py-16 md:py-20" style={{ backgroundColor: 'var(--bg-how-it-works)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: 'var(--text-primary)' }}>
               Comment ça marche ?
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+            <p className="text-lg sm:text-xl max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
               Votre boutique en ligne en 3 étapes, aussi simple qu&apos;un clic
             </p>
           </div>
 
           {/* 3 Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {/* Step 1 */}
-            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-6 hover:bg-white/5">
+            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-4 sm:p-6 hover:bg-white/5">
               <div className="mb-6">
                 <div className="text-2xl font-light mb-4 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">01</div>
                 <div className="w-full h-px mb-6 transition-all duration-300 group-hover:bg-[#7C3AED] group-hover:h-0.5" style={{ backgroundColor: 'var(--text-secondary)' }}></div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
                 Téléchargement
               </h3>
               <p className="text-base leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: 'var(--text-secondary)' }}>
@@ -275,12 +275,12 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-6 hover:bg-white/5">
+            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-4 sm:p-6 hover:bg-white/5">
               <div className="mb-6">
                 <div className="text-2xl font-light mb-4 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">02</div>
                 <div className="w-full h-px mb-6 transition-all duration-300 group-hover:bg-[#7C3AED] group-hover:h-0.5" style={{ backgroundColor: 'var(--text-secondary)' }}></div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
                 Configuration
               </h3>
               <p className="text-base leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: 'var(--text-secondary)' }}>
@@ -289,12 +289,12 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-6 hover:bg-white/5">
+            <div className="text-center group cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-xl p-4 sm:p-6 hover:bg-white/5">
               <div className="mb-6">
                 <div className="text-2xl font-light mb-4 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">03</div>
                 <div className="w-full h-px mb-6 transition-all duration-300 group-hover:bg-[#7C3AED] group-hover:h-0.5" style={{ backgroundColor: 'var(--text-secondary)' }}></div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 transition-colors duration-300 group-hover:text-[#7C3AED] text-[#7C3AED]">
                 Lancement
               </h3>
               <p className="text-base leading-relaxed transition-colors duration-300 group-hover:text-white" style={{ color: 'var(--text-secondary)' }}>
@@ -344,7 +344,7 @@ export default function Home() {
           </div>
 
           {/* Pricing cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Plan Basic */}
             <div className="relative group">
               <div className="bg-transparent rounded-2xl p-6 text-center flex flex-col h-full border-2 border-[#7C3AED]/30 hover:border-[#7C3AED]/60 hover:bg-black/5 dark:hover:bg-[#7C3AED]/5 transition-all duration-300 hover:shadow-xl hover:shadow-[#7C3AED]/20 backdrop-blur-sm">
@@ -548,7 +548,7 @@ export default function Home() {
       </section>
 
       {/* Mobile App Showcase Section */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-primary)' }}>
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-[#7C3AED]/5 to-[#563491]/5 rounded-full blur-3xl animate-pulse"></div>
@@ -558,25 +558,25 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-[#7C3AED]/10 border border-[#7C3AED]/20 rounded-full mb-6">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-[#7C3AED]/10 border border-[#7C3AED]/20 rounded-full mb-4 sm:mb-6">
               <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>📱 Application</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4" style={{ color: 'var(--text-primary)' }}>
               Découvrez mShop en action
             </h2>
-            <p className="text-xl max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+            <p className="text-lg sm:text-xl max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
               Une interface intuitive et moderne, conçue pour simplifier votre expérience e-commerce
             </p>
           </div>
 
           {/* 2 Phones Showcase */}
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {/* Phone 1 - Dashboard */}
           <div className="text-center">
             <div className="relative group">
-                  <div className="relative w-56 h-[480px] mx-auto">
+                  <div className="relative w-48 h-[400px] sm:w-56 sm:h-[480px] mx-auto">
                     {/* Phone shadow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/20 to-[#563491]/20 rounded-[2.5rem] blur-xl transform translate-y-6 scale-105 group-hover:scale-110 transition-all duration-500"></div>
                     
@@ -600,7 +600,7 @@ export default function Home() {
           {/* Phone 2 - Products */}
           <div className="text-center">
             <div className="relative group">
-                  <div className="relative w-56 h-[480px] mx-auto">
+                  <div className="relative w-48 h-[400px] sm:w-56 sm:h-[480px] mx-auto">
                     {/* Phone shadow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#563491]/15 to-[#7C3AED]/15 rounded-[2.5rem] blur-xl transform translate-y-6 scale-105 group-hover:scale-110 transition-all duration-500"></div>
                     
@@ -626,23 +626,23 @@ export default function Home() {
       </section>
 
         {/* CTA Section */}
-        <section id="download" className="py-12 relative overflow-hidden" style={{ background: 'var(--gradient-download)' }}>
+        <section id="download" className="py-8 sm:py-10 md:py-12 relative overflow-hidden" style={{ background: 'var(--gradient-download)' }}>
           {/* Background decoration */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#563491]/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#7C3AED]/10 rounded-full blur-2xl"></div>
           
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               {/* Left side - Text content */}
               <div className="text-left">
                 <div className="inline-flex items-center px-3 py-1 rounded-full mb-3" style={{ backgroundColor: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)' }}>
                   <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>🎉 C&apos;est parti !</span>
                 </div>
 
-                <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3" style={{ color: 'var(--text-primary)' }}>
                   Prêt à créer votre boutique ?
                 </h2>
-                <p className="text-base mb-4 max-w-lg" style={{ color: 'var(--text-secondary)' }}>
+                <p className="text-sm sm:text-base mb-3 sm:mb-4 max-w-lg" style={{ color: 'var(--text-secondary)' }}>
                   Rejoignez des milliers d&apos;entrepreneurs qui ont déjà choisi mShop pour développer leur business en ligne ✨
                 </p>
 

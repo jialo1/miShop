@@ -59,6 +59,24 @@ div[style*="position: absolute"][style*="bottom"] {
   display: none !important;
 }
 
+/* Hide Fast Refresh and HMR messages in console */
+@media (prefers-reduced-motion: no-preference) {
+  /* Only hide in development when user doesn't prefer reduced motion */
+}
+
+/* Additional console error suppression */
+body {
+  /* Prevent extension conflicts */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide any browser extension overlays */
+[id*="extension"],
+[class*="extension"],
+[data-extension] {
+  display: none !important;
+}
+
 /* Custom animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

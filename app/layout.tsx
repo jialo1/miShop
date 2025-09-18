@@ -13,6 +13,27 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "mShop - Créez votre boutique en ligne facilement",
   description: "L'application mobile qui vous permet de créer une boutique en ligne professionnelle en quelques minutes. Simple, rapide et efficace comme Shopify.",
+  keywords: ["boutique en ligne", "e-commerce", "mobile", "création site web", "shopify alternative"],
+  authors: [{ name: "mShop Team" }],
+  creator: "mShop",
+  publisher: "mShop",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+  manifest: '/manifest.json',
+  themeColor: '#7C3AED',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };
 
 export default function RootLayout({
@@ -26,52 +47,68 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Hide development indicators and scrolling elements
+              // Hide development indicators and prevent console errors
               function hideDevIndicators() {
-                const selectors = [
-                  '[data-nextjs-toast]',
-                  '.nextjs-toast',
-                  '[data-next-badge]',
-                  '[data-next-badge-root]',
-                  '#devtools-indicator',
-                  '.devtools-indicator',
-                  '[aria-label*="Next.js"]',
-                  '[aria-label*="TypeScript"]',
-                  '[aria-label*="React"]',
-                  '[title*="Next.js"]',
-                  '[title*="TypeScript"]',
-                  '[title*="React"]'
-                ];
-                
-                selectors.forEach(selector => {
-                  const elements = document.querySelectorAll(selector);
-                  elements.forEach(el => {
-                    el.style.display = 'none';
-                    el.style.visibility = 'hidden';
-                    el.style.opacity = '0';
-                    el.remove();
+                try {
+                  const selectors = [
+                    '[data-nextjs-toast]',
+                    '.nextjs-toast',
+                    '[data-next-badge]',
+                    '[data-next-badge-root]',
+                    '#devtools-indicator',
+                    '.devtools-indicator',
+                    '[aria-label*="Next.js"]',
+                    '[aria-label*="TypeScript"]',
+                    '[aria-label*="React"]',
+                    '[title*="Next.js"]',
+                    '[title*="TypeScript"]',
+                    '[title*="React"]'
+                  ];
+                  
+                  selectors.forEach(selector => {
+                    try {
+                      const elements = document.querySelectorAll(selector);
+                      elements.forEach(el => {
+                        if (el && el.parentNode) {
+                          el.style.display = 'none';
+                          el.style.visibility = 'hidden';
+                          el.style.opacity = '0';
+                          el.remove();
+                        }
+                      });
+                    } catch (e) {
+                      // Silent fail for extension conflicts
+                    }
                   });
-                });
-                
-                // Hide any elements with horizontal scrolling
-                const scrollingElements = document.querySelectorAll('*');
-                scrollingElements.forEach(el => {
-                  const style = window.getComputedStyle(el);
-                  if (style.transform.includes('translateX') || 
-                      style.animation.includes('scroll') ||
-                      style.animation.includes('marquee')) {
-                    el.style.display = 'none';
-                  }
-                });
+                } catch (e) {
+                  // Silent fail for extension conflicts
+                }
               }
               
-              // Run immediately and on DOM changes
-              document.addEventListener('DOMContentLoaded', hideDevIndicators);
-              document.addEventListener('load', hideDevIndicators);
+              // Prevent extension-related console errors
+              window.addEventListener('error', function(e) {
+                if (e.message && e.message.includes('message channel closed')) {
+                  e.preventDefault();
+                  return false;
+                }
+              });
               
-              // Watch for new elements
-              const observer = new MutationObserver(hideDevIndicators);
-              observer.observe(document.body, { childList: true, subtree: true });
+              // Run when DOM is ready
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', hideDevIndicators);
+              } else {
+                hideDevIndicators();
+              }
+              
+              // Watch for new elements with error handling
+              try {
+                const observer = new MutationObserver(hideDevIndicators);
+                if (document.body) {
+                  observer.observe(document.body, { childList: true, subtree: true });
+                }
+              } catch (e) {
+                // Silent fail for extension conflicts
+              }
             `,
           }}
         />
