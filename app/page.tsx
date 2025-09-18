@@ -150,7 +150,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Votre site web en 3 clics</h3>
+                    <h3 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>Votre site e-commerce en 3 clics</h3>
                     <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
                       Créez votre site web personnel en quelques clics, intégrant tous les moyens de paiement locaux. Personnalisez-le à votre image, ajoutez vos produits, puis partagez facilement le lien sur vos réseaux sociaux.
                       Simple, rapide et conçu pour vous mettre en valeur !
