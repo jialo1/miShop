@@ -91,11 +91,48 @@ body::before {
   z-index: -9999;
 }
 
-/* Additional console error suppression for extensions */
-* {
-  /* Prevent extension interference */
-  -webkit-tap-highlight-color: transparent !important;
-}
+         /* Additional console error suppression for extensions */
+         * {
+           /* Prevent extension interference */
+           -webkit-tap-highlight-color: transparent !important;
+         }
+
+         /* Block extension message channels */
+         iframe[src*="chrome-extension"],
+         iframe[src*="moz-extension"],
+         iframe[src*="extension"],
+         div[data-extension],
+         div[class*="extension"],
+         script[src*="chrome-extension"],
+         script[src*="moz-extension"],
+         script[src*="extension"] {
+           display: none !important;
+           visibility: hidden !important;
+           opacity: 0 !important;
+           pointer-events: none !important;
+           position: absolute !important;
+           left: -9999px !important;
+           top: -9999px !important;
+         }
+
+         /* Prevent extension message channel errors */
+         body {
+           /* Block extension message channels */
+           -webkit-user-select: none;
+           -moz-user-select: none;
+           -ms-user-select: none;
+           user-select: none;
+         }
+
+         /* Additional extension blocking */
+         [data-extension-id],
+         [data-ext-id],
+         [id*="chrome-extension"],
+         [id*="moz-extension"],
+         [class*="chrome-extension"],
+         [class*="moz-extension"] {
+           display: none !important;
+         }
 
 /* Custom animations */
 @keyframes float {

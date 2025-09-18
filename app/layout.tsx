@@ -185,31 +185,49 @@ export default function RootLayout({
                 }
               }
               
-              // Prevent extension-related console errors
-              window.addEventListener('error', function(e) {
-                if (e.message && (
-                  e.message.includes('message channel closed') ||
-                  e.message.includes('message port closed') ||
-                  e.message.includes('extension') ||
-                  e.message.includes('chrome-extension') ||
-                  e.message.includes('moz-extension')
-                )) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  return false;
-                }
-              });
-              
-              // Prevent unhandled promise rejections from extensions
-              window.addEventListener('unhandledrejection', function(e) {
-                if (e.reason && (
-                  e.reason.message && e.reason.message.includes('message channel closed') ||
-                  e.reason.message && e.reason.message.includes('extension')
-                )) {
-                  e.preventDefault();
-                  return false;
-                }
-              });
+               // Prevent extension-related console errors
+               window.addEventListener('error', function(e) {
+                 if (e.message && (
+                   e.message.includes('message channel closed') ||
+                   e.message.includes('message port closed') ||
+                   e.message.includes('extension') ||
+                   e.message.includes('chrome-extension') ||
+                   e.message.includes('moz-extension') ||
+                   e.message.includes('listener indicated an asynchronous response') ||
+                   e.message.includes('response was received')
+                 )) {
+                   e.preventDefault();
+                   e.stopPropagation();
+                   e.stopImmediatePropagation();
+                   return false;
+                 }
+               });
+               
+               // Prevent unhandled promise rejections from extensions
+               window.addEventListener('unhandledrejection', function(e) {
+                 if (e.reason && (
+                   (e.reason.message && e.reason.message.includes('message channel closed')) ||
+                   (e.reason.message && e.reason.message.includes('extension')) ||
+                   (e.reason.message && e.reason.message.includes('listener indicated an asynchronous response')) ||
+                   (e.reason.message && e.reason.message.includes('response was received'))
+                 )) {
+                   e.preventDefault();
+                   e.stopPropagation();
+                   return false;
+                 }
+               });
+               
+               // Additional error suppression for extension conflicts
+               const originalConsoleError = console.error;
+               console.error = function(...args) {
+                 const message = args.join(' ');
+                 if (message.includes('message channel closed') || 
+                     message.includes('extension') ||
+                     message.includes('listener indicated an asynchronous response')) {
+                   return;
+                 }
+                 originalConsoleError.apply(console, args);
+               };
               
               // Run when DOM is ready
               if (document.readyState === 'loading') {
