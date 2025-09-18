@@ -139,7 +139,7 @@ export default function Home() {
           </div>
 
           {/* Mosaic Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center lg:justify-items-stretch">
+          <div className="flex flex-col items-center space-y-4 sm:space-y-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-6 md:items-stretch">
             {/* Feature 1 - Large card */}
             <div className="lg:col-span-2 lg:row-span-2 relative group w-full max-w-sm md:max-w-none">
               <div className="h-full rounded-2xl p-8 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#7C3AED]/10" style={{ background: 'linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary))' }}>
